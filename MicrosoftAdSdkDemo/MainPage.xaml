@@ -1,0 +1,50 @@
+﻿<phone:PhoneApplicationPage x:Class="MicrosoftAdSdkDemo.MainPage"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            mc:Ignorable="d"
+                            d:DesignWidth="480"
+                            d:DesignHeight="768"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                            FontSize="{StaticResource PhoneFontSizeNormal}"
+                            Foreground="{StaticResource PhoneForegroundBrush}"
+                            SupportedOrientations="Portrait"
+                            Orientation="Portrait"
+                            shell:SystemTray.IsVisible="True"
+                            xmlns:ads="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI">
+
+    <Grid x:Name="LayoutRoot"
+          Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel"
+                    Grid.Row="0"
+                    Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle"
+                       Text="MICROSOFT AD SDK DEMO"
+                       Style="{StaticResource PhoneTextNormalStyle}" />
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1">
+            <StackPanel>
+                <!--<ads:AdControl Height="80"
+                               Width="480"
+                               AdUnitId="10016058"
+                               ApplicationId="3a6a7b1b-3b66-4fa0-9732-514fc9aa8b89"
+                               Margin="0, 0, 0, 12"/>-->
+                <ads:AdControl Height="80"
+                               Width="480"
+                               AdUnitId="Image480_80"
+                               ApplicationId="test_client" />
+
+            </StackPanel>
+            
+        </Grid>
+    </Grid>
+</phone:PhoneApplicationPage>
